@@ -3,36 +3,51 @@ public class RationalNumber extends RealNumber {
 
   public RationalNumber(int nume, int deno){
     super(0.0);//this value is ignored!
+    if(deno ==0){
+      deno = 1;
+    }
+    if(deno < 0){
+      nume = -1*nume;
+      deno = -1*deno;
+    }
+    denominator = deno;
+    numerator = nume;
   }
 
   public double getValue(){
-    return 0.0;
+    return (double)numerator/(double)denominator;
   }
 
   public int getNumerator(){
-    return 0;
+    return numerator;
   }
 
   public int getDenominator(){
-    return 0;
+    return denominator;
   }
 
   public RationalNumber reciprocal(){
-    return null;
+    RationalNumber flipped= new RationalNumber(denominator,  numerator);
+    return flipped;
   }
 
   public boolean equals(RationalNumber other){
-    return false;
+    return(numerator==other.getNumerator() && denominator == other.getDenominator());
   }
 
   public String toString(){
-    return "0";
+    return numerator + "/" + denominator;
   }
 
   private static int gcd(int a, int b){
-
-    return 0;
+    while(b!=0){
+      int rem = a%b;
+      a = b;
+      b = rem;
+    }
+    return a;
   }
+
 
   private void reduce(){
 
