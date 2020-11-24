@@ -37,8 +37,8 @@ public class RealNumber{
     }
 
     public RealNumber subtract(RealNumber other){
-      RealNumber differencee = new RealNumber(value-other.getValue());
-      return differencee;
+      RealNumber difference = new RealNumber(value-other.getValue());
+      return difference;
     }
 
 }
