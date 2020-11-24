@@ -65,10 +65,10 @@ public class RationalNumber extends RealNumber {
   }
 
   public RationalNumber add(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator * other.getDenominator()+other.getNumerator() * denominator,denominator * other.getDenominator());
   }
 
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator * other.getDenominator()-other.getNumerator() * denominator,denominator * other.getDenominator());
   }
 }
