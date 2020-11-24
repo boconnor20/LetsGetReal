@@ -12,6 +12,7 @@ public class RationalNumber extends RealNumber {
     }
     denominator = deno;
     numerator = nume;
+    reduce();
   }
 
   public double getValue(){
@@ -56,11 +57,11 @@ public class RationalNumber extends RealNumber {
   }
 
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator * other.getNumerator(), denominator * other.getDenominator());
   }
 
   public RationalNumber divide(RationalNumber other){
-    return null;
+    return multiply(other.reciprocal());
   }
 
   public RationalNumber add(RationalNumber other){
