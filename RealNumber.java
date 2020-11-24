@@ -32,7 +32,8 @@ public class RealNumber{
     }
 
     public RealNumber divide(RealNumber other){
-          return null;
+      RealNumber quotient= new RealNumber(value/other.getValue());
+      return quotient;
     }
 
     public RealNumber subtract(RealNumber other){
