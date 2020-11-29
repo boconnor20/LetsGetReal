@@ -14,11 +14,7 @@ public class RealNumber extends Number {
     }
       //---------ONLY EDIT BELOW THIS LINE------------
     public boolean equals(RealNumber other){
-      if (value == 0.0){
-      return (other.getValue() == 0.0);
-      }
-      double diff = (value-other.getValue())/value;
-      return Math.abs(diff)<0.00001;
+      return super.equals(other);
     }
 
     public RealNumber add(RealNumber other){
