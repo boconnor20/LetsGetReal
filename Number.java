@@ -14,7 +14,11 @@ public abstract class Number{
   *are within 0.00001 of eachother.
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
-  public boolean equals(Number other){
-    //TO BE IMPLEMENTED  }
-}
+  public boolean equals(RealNumber other){
+    if (getValue() == 0.0){
+    return (other.getValue() == 0.0);
+    }
+    double diff = (getValue()-other.getValue())/getValue();
+    return Math.abs(diff)<0.00001;
+  }
 }
