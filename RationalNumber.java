@@ -38,6 +38,13 @@ public class RationalNumber extends Number {
   }
 
   public String toString(){
+    if(denominator==1){
+      return "" + numerator;
+    }
+    if(numerator==0){
+      return "0";
+    }
+    else
     return numerator + "/" + denominator;
   }
 
