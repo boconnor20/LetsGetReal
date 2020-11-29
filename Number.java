@@ -19,11 +19,11 @@ public abstract class Number{
   *are within 0.00001 of eachother.
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
-  public boolean equals(RealNumber other){
+  public boolean equals(Number other){
     if (getValue() == 0.0){
     return (other.getValue() == 0.0);
     }
     double diff = (getValue()-other.getValue())/getValue();
-    return Math.abs(diff)<0.00001;
+    return Math.abs(diff)<=0.00001;
   }
 }
